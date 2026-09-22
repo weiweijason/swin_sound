@@ -6,7 +6,7 @@ __pycache__/
 venv/
 
 # 資料與產出（體積大，不進版本控制）
-data/
+/data/
 checkpoints/
 outputs/
 *.zip
