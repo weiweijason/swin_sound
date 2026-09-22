@@ -1,7 +1,8 @@
 # 資料與產出走 volume 掛載，不打包進 image
-data/
-checkpoints/
-outputs/
+# 注意：前置 / 錨定根目錄，避免誤刪 ser_swin/data/ 套件
+/data/
+/checkpoints/
+/outputs/
 
 # 金鑰與環境檔
 .env
