@@ -1,0 +1,16 @@
+# 環境與金鑰
+.env
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# 資料與產出（體積大，不進版本控制）
+data/
+checkpoints/
+outputs/
+*.zip
+
+# IDE
+.vscode/
+.idea/

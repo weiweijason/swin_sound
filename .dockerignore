@@ -1,0 +1,16 @@
+# 資料與產出走 volume 掛載，不打包進 image
+data/
+checkpoints/
+outputs/
+
+# 金鑰與環境檔
+.env
+
+# Python 快取
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# 版本控制
+.git/
+.gitignore

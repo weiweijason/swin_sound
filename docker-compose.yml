@@ -1,0 +1,24 @@
+services:
+  sound-swin:
+    build: .
+    container_name: sound-swin
+    # 不自動跑流程：只開 bash
+    # 使用方式：docker compose run -it sound-swin bash
+    command: ["bash"]
+    stdin_open: true
+    tty: true
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./checkpoints:/app/checkpoints
+      - ./outputs:/app/outputs
+    # 如需 NVIDIA GPU（訓練 SwinV2 建議），取消以下註解
+    # （主機需安裝 nvidia-container-toolkit）
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: all
+    #           capabilities: [gpu]
