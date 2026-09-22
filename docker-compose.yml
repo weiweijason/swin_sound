@@ -15,10 +15,10 @@ services:
       - ./outputs:/app/outputs
     # 如需 NVIDIA GPU（訓練 SwinV2 建議），取消以下註解
     # （主機需安裝 nvidia-container-toolkit）
-    # deploy:
-    #   resources:
-    #     reservations:
-    #       devices:
-    #         - driver: nvidia
-    #           count: all
-    #           capabilities: [gpu]
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
